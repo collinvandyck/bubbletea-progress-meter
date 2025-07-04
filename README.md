@@ -16,3 +16,8 @@ type Progress interface {
 ```
 
 to supply your own percentage.
+
+Demo:
+
+https://github.com/user-attachments/assets/56b95210-c27d-4c64-9e3c-7a7d6f41fdc4
+
