@@ -86,11 +86,6 @@ func (m meter) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 		m.pct = pct
 		return m, tickCmd()
-
-		//case progress.FrameMsg:
-		//progressModel, cmd := m.widget.Update(msg)
-		//m.widget = progressModel.(progress.Model)
-		//return m, cmd
 	}
 	return m, nil
 }
