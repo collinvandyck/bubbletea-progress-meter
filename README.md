@@ -2,11 +2,11 @@
 
 This is a demo of using the bubbletea progress meter.
 
-To run:
+## Example 1
 
-    go run ./main.go
+    go run cmd/ex1/main.go
 
-You'd implement the Progress interface:
+The first example works by writing Go code to feed the widget a percentage. To do that you need to implement the Progress interface:
 
 ```go
 type Progress interface {
@@ -15,9 +15,11 @@ type Progress interface {
 }
 ```
 
-to supply your own percentage.
-
-Demo:
-
 https://github.com/user-attachments/assets/56b95210-c27d-4c64-9e3c-7a7d6f41fdc4
+
+## Example 2
+
+    go run cmd/ex2/main.go
+
+The second example works by parsing out floats from stdin. As long as your shell pipeline generates numbers between 0 and 1 it will update the widget.
 
