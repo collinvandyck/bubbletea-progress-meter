@@ -23,3 +23,5 @@ https://github.com/user-attachments/assets/56b95210-c27d-4c64-9e3c-7a7d6f41fdc4
 
 The second example works by parsing out floats from stdin. As long as your shell pipeline generates numbers between 0 and 1 it will update the widget.
 
+https://github.com/user-attachments/assets/e0da8966-dc26-448f-8183-7d769f362239
+
