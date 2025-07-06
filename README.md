@@ -15,6 +15,26 @@ type Progress interface {
 }
 ```
 
+In the following video I'm using a func with a goroutine to generate the percentages:
+
+```go
+var mut sync.Mutex
+var value float64
+go func() {
+    for i := range 100 {
+        time.Sleep(10 * time.Millisecond)
+        mut.Lock()
+        value = float64(i+1) / 100
+        mut.Unlock()
+    }
+}()
+progMeter := newMeter(ProgressFunc(func() (float64, error) {
+    mut.Lock()
+    defer mut.Unlock()
+    return value, nil
+}))
+```
+
 https://github.com/user-attachments/assets/56b95210-c27d-4c64-9e3c-7a7d6f41fdc4
 
 ## Example 2
